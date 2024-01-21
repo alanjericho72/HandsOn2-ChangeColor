@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color</title>
+
+    <style>
+        body {
+            background-image: url("bg.jpg");
+            height: 90vh;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        span{
+            color: green;
+        }
+
+        #colorBox {
+            background-color: green;
+            width: 200px;
+            height: 200px;
+            border-radius: 4em;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 20px;
+            margin-left: 430px;
+            margin-top: 50px;
+            width: 500px;
+            background-color: bisque ;
+            border-radius: 3em;
+            font-family: cursive;
+            font-weight: bold;
+            font-size: large;
+
+        }
+
+        button:hover {
+            background-color: red;
+            color: white;
+            box-shadow: 0 0 5px yellow, 0 0 25px yellow, 0 0 50px yellow, 0 0 100px yellow,
+            0 0 200px yellow;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: cursive;
+            font-weight: bold;
+
+        }
+
+        p {
+            text-align: center;
+            font-family: cursive;
+            font-weight: bold;
+            color: blue;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Change Color <span>Green</span> to</h1>
+    <p>Blue</p>
+    <div id="colorBox"></div>
+    <button id="changeColorBtn"> Change Color</button>
+
+    <script>
+        const colorBox = document.getElementById("colorBox");
+        let changeColorBtn = document.getElementById("changeColorBtn");
+
+        changeColorBtn.addEventListener("click", changeColor);
+
+        function changeColor() {
+            if (colorBox.style.backgroundColor === "green") {
+                colorBox.style.backgroundColor = "blue";
+            } else {
+                colorBox.style.backgroundColor = "green";
+            }
+        }
+    </script>
+</body>
+</html>
